@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "SWARMSTEINToken",
+    "name": "Swarmstein",
+    "symbol": "SWARMSTEIN",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "125270724187523965593206900"
+  },
+  "economics": {
+    "poolBps": 9000,
+    "initialMarketCapWei": "2500000000000000000000",
+    "remainderTo": "0x000000000000000000000000000000000000dead"
+  },
+  "notes": "Swarmstein (SWARMSTEIN): plain fixed-supply ERC-20 on Robinhood Chain (chain id 4663). 1,000,000,000 tokens (1e27 minor units, 18 decimals) are minted once to the deployer (the ProjectFactory) in a no-argument constructor; there is no mint, owner, admin, pause, blacklist, fee, tax, limit, proxy, delegatecall or selfdestruct. The factory distributes the supply: 10% to the launch's MerkleDistributor, 90% (poolBps) seeds the single-sided Uniswap v4 pool against IMD via the PoolManager 0x8366a39cc670b4001a1121b8f6a443a643e40951 at the 1.25% launch fee and tick spacing 60, and any remainder goes to remainderTo (the dead address). pool.initialPrice is provenance only: the deployer derives the opening sqrtPriceX96 from initialMarketCapWei (2500 IMD), the supply and the deployed currency order."
+}
